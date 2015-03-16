@@ -35,7 +35,7 @@ $(document).ready(function() {
 });
 ```
 * Of course you can use both parameters (`currencyList` and `date`)<br><br>
-_Example showing EUR and USD on a specified date (2015-03-01)<br>
+_Example showing EUR and USD on a specified date (2015-03-01)_<br>
 ```javascript
 $(document).ready(function() {
 	$("#hnb").getCurrencyExchangeRates({
