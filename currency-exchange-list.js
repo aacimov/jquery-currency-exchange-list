@@ -5,11 +5,12 @@
 		var $exchangeList = $(".currency-exchange-list");
 		
 		var settings = $.extend({
-            currencyList: ["CHF","EUR","USD","GBP"]
+            currencyList: ["CHF","EUR","USD","GBP"],
+            date: ""
         }, options );
 			
-		function formattedDate(date) {
-		    var d = new Date(date || Date.now()),
+		function formattedDate() {
+		    var d = new Date(settings.date),
 		        month = '' + (d.getMonth() + 1),
 		        day = '' + d.getDate(),
 		        year = d.getFullYear();
@@ -17,10 +18,10 @@
 		    if (day.length < 2) day = '0' + day;
 		    return [year,month,day, ].join('-');
 		}
-	
+			
 		$.ajax({
 			dataType: "jsonp",
-			url: "http://hnbex.eu/api/v1/rates/daily/?date="+formattedDate()+"?callback=",
+			url: "http://hnbex.eu/api/v1/rates/daily/?date="+formattedDate(settings.date),
 			success: function(data) {
 				$exchangeList.append("<tr class='header'><th>Valuta</th><th>Kupovni</th><th>Srednji</th>/<th>Prodajni</th></tr>")
 				$.each(data, function(){
@@ -43,6 +44,7 @@
 			},
 			error: function(){ $exchangeList.append("<tr><td>Pogreška u dohvaćanju informacija sa HNB tečajne liste.</td></tr>"); }
 		});	
+				
 	}
 	
 }(jQuery));
