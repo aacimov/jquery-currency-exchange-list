@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    <meta charset=utf-8>
+    <title>Get HNB</title>
+    <link href="currency-exchange-list.css" rel="stylesheet" media="all" />
+    <script src="jquery-1.11.2.min.js"></script>
+    <script src="currency-exchange-list.js"></script>
+    <script type="text/javascript">
+	    $(document).ready(function() {
+			$("#hnb").getCurrencyExchangeRates();
+		});
+    </script>
+    </head>
+<body>
+	<div id="hnb">
+		<div class="currency-exchange-list"></div>
+	</div>
+</body>
+</html>
