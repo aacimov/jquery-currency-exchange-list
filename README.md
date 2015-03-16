@@ -1,5 +1,5 @@
 #jquery-currency-exchange-list
-jQuery plugin for displaying currency exchange list based on Croatian national bank (HNB) Exchange Rate Lookup by hnbex.eu
+jQuery plugin for displaying currency exchange list based on Croatian national bank (HNB) Exchange Rate Lookup by hnbex.eu. Plugin gets the currency list in JSONP using AJAX which makes possible using cross-domain requests from JavaScript directly from the user's browser.
 ##Usage
 Use this plugin to get Croatian national bank (HNB) currency exchange list for present day. You can easily format the displayed list of currencies using options described below. Plugin is using the API provided by hnbex.eu.
 ##Implementation
