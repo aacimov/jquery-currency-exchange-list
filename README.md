@@ -14,16 +14,36 @@ $(document).ready(function() {
 });
 ```
 * By default (if no options added), displayed currencies are CHF, EUR, GBP, USD.<br><br>
-##Options to customize the displayed currency list
-* If you wish to display your own set of currencies you can do it by adding options parameter `currencyList`<br><br>_Example for showing only EUR and USD:_<br>
+
+##Options to customize the displayed currency list (`currencyList`,`date`)
+
+* If you wish to display your own set of currencies you can do it by adding options parameter (`currencyList`) <br><br>_Example for showing only EUR and USD:_<br>
 ```javascript
 $(document).ready(function() {
 	$("#hnb").getCurrencyExchangeRates({
-	  currencyList: ["EUR","USD"]
+		currencyList: ["EUR","USD"]
 	});
 });
 ```
-* You can add following currencies: AUD, CAD, CZK, DKK, HUF, JPY, NOK, SEK, CHF, GBP, USD, EUR, PLN
+* You can add following currencies: AUD, CAD, CZK, DKK, HUF, JPY, NOK, SEK, CHF, GBP, USD, EUR, PLN<br><br>
+* If you wish to display table of currency exchange rates on a specified date you can use an option parameter (`date`)<br><br>_Example showing rates on a specified date:_<br>
+```javascript
+$(document).ready(function() {
+	$("#hnb").getCurrencyExchangeRates({
+		date: "yyyy-mm-dd"
+	});
+});
+```
+* Of course you can use both parameters (`currencyList` and `date`)<br><br>
+_Example showing EUR and USD on a specified date (2015-03-01)<br>
+```javascript
+$(document).ready(function() {
+	$("#hnb").getCurrencyExchangeRates({
+		currencyList: ["EUR","USD"],
+		date: "2015-03-01"
+	});
+});
+```
 
 ##Fork
 Feel free to improve the plugin and share your fork with the world :)
