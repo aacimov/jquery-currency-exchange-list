@@ -14,7 +14,7 @@ $(document).ready(function() {
 ```
 * If you want to use a different selector, just pass it in options parameter, like this: 
 ```javascript 
-$("#hnb").getCurrencyExchangeRates('.my-currency-exchange-widget');
+$("#hnb").getCurrencyExchangeRates({selector:'.my-currency-exchange-widget'});
 ```
 * By default (if no options added), displayed currencies are CHF, EUR, GBP, USD.<br><br>
 
