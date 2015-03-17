@@ -6,12 +6,15 @@ Use this plugin to get Croatian national bank (HNB) currency exchange list for p
 * Plugin is jQuery based so before attaching the plugin you have to add jQuery to your `<head>` tag<br>`<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>`<br><br>
 * Add the plugin script anywhere after jQuery in `<head>` tag<br>`<script type="text/javascript" src="currency-exchange-list.js"></script>`<br><br>
 * Create `<div id="hnb">` in your template file<br><br>
-* Inside `<div id="hnb">` put `<div class="currency-exchange-list">`<br><br>_Example:_<br>`<div id="hnb"><div class="currency-exchange-list"></div></div>`<br><br>
 * Attach the plugin to `<div id="hnb"></div>`
 ```javascript
 $(document).ready(function() {
 	$("#hnb").getCurrencyExchangeRates();
 });
+```
+* If you want to use a different selector, just pass it in options parameter, like this: 
+```javascript 
+$("#hnb").getCurrencyExchangeRates('.my-currency-exchange-widget');
 ```
 * By default (if no options added), displayed currencies are CHF, EUR, GBP, USD.<br><br>
 
