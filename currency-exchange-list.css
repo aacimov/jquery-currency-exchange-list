@@ -9,10 +9,6 @@
 	width: 100%;
 }
 
-.currency-exchange-list-table tr {
-	display: none;
-}
-
 .currency-exchange-list-table tr.header {
 	display: table-row;
 }
