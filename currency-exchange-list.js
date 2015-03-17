@@ -30,7 +30,7 @@
 			$table.append("<tr class='header'><th>Valuta</th><th>Kupovni</th><th>Srednji</th>/<th>Prodajni</th></tr>");
 
 			var filtered_data = $.grep(data, function(currency){
-				return currency && settings.currencyList.indexOf(currency.currency_code) > 0;
+				return currency && settings.currencyList.indexOf(currency.currency_code) >= 0;
 			});
 
 			$.each(filtered_data, function(){
